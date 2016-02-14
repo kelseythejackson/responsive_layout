@@ -1,0 +1,13 @@
+mixin navi(...links)
+  ul
+    each link in links
+      li
+        a(href=link.toLowerCase() + ".html")= link
+header
+  .container.flex
+    .name
+      h1 
+        a(href="index.html") Kelsey Jackson
+    nav
+      +navi('Home','Portfolio', 'Contact')
+  .divider

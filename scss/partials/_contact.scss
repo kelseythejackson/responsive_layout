@@ -1,0 +1,25 @@
+@mixin contact {
+  display: flex;
+  width: 200px;
+  margin: auto;
+  margin-bottom: 12px;
+  align-items: center;
+  justify-content: center;
+  i {
+    margin-right: 16px;
+  }
+  p {
+    margin: 0
+  }
+}
+
+h2 {
+  color: $green;
+}
+p {
+  margin-bottom: 20px;
+}
+
+.phone, .email {
+  @include contact;
+}
