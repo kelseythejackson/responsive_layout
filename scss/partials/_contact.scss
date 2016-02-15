@@ -1,14 +1,14 @@
 @mixin contact {
   display: flex;
-  width: 200px;
+  width: 220px;
   margin: auto;
   margin-bottom: 12px;
   align-items: center;
   justify-content: center;
-  i {
-    margin-right: 16px;
-  }
   p {
+    span {
+      font-weight: 300;
+    }
     margin: 0
   }
 }
