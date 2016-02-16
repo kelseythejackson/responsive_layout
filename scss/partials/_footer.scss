@@ -3,8 +3,12 @@ footer {
     justify-content: space-between;
     p {
       &.mobile {
+        a {
+          color: #7a7a7a;
+        }
         @media screen and (min-width: 768px) {
           display: none;
+
         }
       }
     }
