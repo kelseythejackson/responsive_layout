@@ -10,9 +10,7 @@ body {
     padding: $containerPadding;
     text-align: center;
     max-width: 1024px;
-    @media screen and (min-width: 1024px) {
-      width: 100%;
-    }
+    
   }
 
   .divider {

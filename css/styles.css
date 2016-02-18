@@ -61,9 +61,6 @@ body {
     padding: 16px 0 8px;
     text-align: center;
     max-width: 1024px; }
-    @media screen and (min-width: 1024px) {
-      body .container {
-        width: 100%; } }
   body .divider {
     width: 85%;
     margin: auto;
