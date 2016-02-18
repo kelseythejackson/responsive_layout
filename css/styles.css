@@ -194,8 +194,7 @@ body {
         @media screen and (min-width: 1024px) {
           body .portfolio .flex ul li {
             display: inline-block;
-            width: 33%;
-            color: white; } }
+            width: 33%; } }
   body h2 {
     color: #46ae6b; }
   body p {
