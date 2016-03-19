@@ -1,0 +1,12 @@
+.container {
+  margin: auto;
+  max-width: 1024px;
+  padding: $container-padding;
+  text-align: center;
+  width: 90.625%;
+}
+
+
+.flex {
+  @extend %flex;
+}

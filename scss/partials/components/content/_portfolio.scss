@@ -1,0 +1,54 @@
+.portfolio {
+  background: $white;
+
+  .flex {
+    color: $chateau-green;
+    flex-flow: column;
+  }
+}
+
+ul {
+
+  @extend %flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  li {
+    @include mq(medium) {
+      float: left;
+      padding: 0 4px;
+      width: 50%;
+    }
+
+    @include mq(medium) {
+      display: inline-block;
+      width: 33%;
+    }
+  }
+
+
+}
+
+.project {
+
+  img {
+    border-radius: 4px;
+    margin-bottom: 8px;
+    max-width: 1280px;
+    width: 100%;
+  }
+
+  h3 {
+    font-size: 1.35em;
+    font-weight: 300;
+    margin-bottom: 8px;
+  }
+
+  p {
+    color: $boulder;
+    line-height: 1.5;
+    margin-bottom: 32px;
+  }
+
+
+}

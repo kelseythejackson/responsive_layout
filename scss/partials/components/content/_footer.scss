@@ -1,0 +1,50 @@
+footer {
+  .flex {
+    justify-content: space-between;
+  }
+
+  .mobile {
+
+    a {
+      color: $boulder;
+    }
+
+    @include mq(medium) {
+      display: none;
+    }
+  }
+}
+
+.footer-nav {
+  display: none;
+
+  @include mq(medium) {
+
+    display: flex;
+    justify-content: space-around;
+
+    li {
+      width: 33%;
+    }
+  }
+
+
+  a {
+    @extend %link-style;
+    border: 0;
+    padding: 0;
+    width: 120px;
+
+    @include mq(medium) {
+      border-bottom: 2px solid transparent;
+      color: $boulder;
+      margin-left: 24px;
+      transition: $transition;
+      width: auto;
+    }
+
+    @include mq(large) {
+      @extend %hover;
+    }
+  }
+}

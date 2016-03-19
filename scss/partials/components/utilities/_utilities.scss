@@ -1,0 +1,36 @@
+%hover {
+  &:hover {
+    border-bottom: 2px solid $boulder;
+  }
+}
+
+%link-styles {
+  color: $boulder;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+%flex {
+  display: flex;
+}
+
+@mixin mq($break) {
+  @if $break == 'small' {
+    @media (min-width: $brkpoint-small) and (max-width: $brkpoint-medium) {
+      @content
+    }
+  } @else if $break == 'medium' {
+      @media (min-width: $brkpoint-medium + 1) {
+        @content
+      }
+  } @else if $break == 'large' {
+    @media (min-width: $brkpoint-lrg) {
+      @content
+    }
+  }
+}
+
+@mixin nav($margin, $width) {
+  margin: $margin;
+  width: $width;
+}

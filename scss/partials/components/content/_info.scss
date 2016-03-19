@@ -1,0 +1,36 @@
+.info {
+  .flex {
+    flex-direction: column;
+
+    .info-text {
+      line-height: 1.4;
+      margin-bottom: 20px;
+
+      @include mq(medium) {
+        margin-right: 20px;
+        text-align: left;
+        width: 60%;
+      }
+    }
+
+    @include mq(medium) {
+      align-items: center;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+  }
+
+  .profile-image {
+    padding: 16px 0;
+
+    img {
+      border: 2px solid $white;
+      border-radius: 4px;
+      box-shadow: 0 0 8px rgba($deep-fir, .25);
+      display: block;
+      margin: auto;
+      max-width: 367px;
+      width: 100%;
+    }
+  }
+}

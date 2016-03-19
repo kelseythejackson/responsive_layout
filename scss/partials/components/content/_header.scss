@@ -1,0 +1,114 @@
+header {
+  .flex {
+    flex-direction: column;
+
+    @include mq(large) {
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .name {
+    padding: 48px 0;
+
+    @include mq(medium) {
+      padding: 12px 0 24px;
+    }
+
+    a {
+      color: $boulder;
+    }
+  }
+}
+
+.main-nav {
+  padding: 16px 0;
+
+  .nav-toggle {
+    display: block;
+
+  }
+
+  .vis {
+    align-items: center;
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    margin-bottom: 36px;
+
+    .nav-toggle {
+      margin-right: 8px;
+    }
+
+    .vis-icon {
+      display: inline-block;
+      height: 24px;
+      max-width: 24px;
+      width: 24px;
+    }
+  }
+
+  @include mq(medium) {
+    @include nav(auto, 360px);
+    .vis {
+      display: none;
+    }
+  }
+
+  @include mq(large) {
+
+    @include nav(0, 240px);
+    padding: 0;
+  }
+
+
+
+
+}
+
+.header-nav {
+
+  li {
+    margin-bottom: 16px;
+    width: 100%;
+
+    @include mq(medium) {
+      margin-bottom: 0;
+      width: 33%;
+    }
+
+    @include mq(medium) {
+
+      @extend %flex;
+      justify-content: space-between;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      @extend %link-style;
+      @include nav(auto, 240px);
+      border: 2px solid $boulder;
+      border-radius: 4px;
+      color: $boulder;
+      padding: 12px;
+
+      @include mq(medium) {
+        border: 0;
+        border-bottom: 2px solid transparent;
+        border-radius: 0;
+        color: $boulder;
+        padding: 0;
+        transition: $transition;
+        width: 68px;
+      }
+
+      @include mq(large) {
+        @extend %hover;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+body {
+  background: $alabaster;
+  color: $boulder;
+  font-family: $font-family;
+}
+
+@import 'partials/layout/layout';
+
+@import 'partials/components/utilities/utilities';
+
+@import 'partials/components/content/helpers';
+
+@import 'partials/components/utilities/type-style';
+
+@import 'partials/components/content/header';
+
+@import 'partials/components/content/info';
+
+@import 'partials/components/content/portfolio';
+
+@import 'partials/components/content/contact';
+
+@import 'partials/components/content/footer';

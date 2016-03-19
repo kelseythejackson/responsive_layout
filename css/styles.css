@@ -140,11 +140,11 @@ body {
   text-align: center;
   width: 90.625%; }
 
-.flex {
-  display: flex; }
-
 .header-nav li a:hover, .footer-nav a:hover {
   border-bottom: 2px solid #7a7a7a; }
+
+.flex, .header-nav li, ul {
+  display: flex; }
 
 .divider {
   background: rgba(122, 122, 122, 0.5);
@@ -152,6 +152,9 @@ body {
   margin: auto;
   max-width: 1024px;
   width: 95%; }
+
+.hidden {
+  display: none; }
 
 h1 {
   font-size: 2.441em;
@@ -175,7 +178,7 @@ a {
 
 header .flex {
   flex-direction: column; }
-  @media screen and (min-width: 1024px) {
+  @media (min-width: 1024px) {
     header .flex {
       align-items: center;
       flex-direction: row;
@@ -183,7 +186,7 @@ header .flex {
 
 header .name {
   padding: 48px 0; }
-  @media screen and (min-width: 768px) {
+  @media (min-width: 769px) {
     header .name {
       padding: 12px 0 24px; } }
   header .name a {
@@ -191,52 +194,73 @@ header .name {
 
 .main-nav {
   padding: 16px 0; }
-  @media screen and (min-width: 768px) {
+  .main-nav .nav-toggle {
+    display: block; }
+  .main-nav .vis {
+    align-items: center;
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    margin-bottom: 36px; }
+    .main-nav .vis .nav-toggle {
+      margin-right: 8px; }
+    .main-nav .vis .vis-icon {
+      display: inline-block;
+      height: 24px;
+      max-width: 24px;
+      width: 24px; }
+  @media (min-width: 769px) {
     .main-nav {
       margin: auto;
-      width: 360px; } }
-  @media screen and (min-width: 1024px) {
+      width: 360px; }
+      .main-nav .vis {
+        display: none; } }
+  @media (min-width: 1024px) {
     .main-nav {
       margin: 0;
-      padding: 0;
-      width: 240px; } }
+      width: 240px;
+      padding: 0; } }
 
 .header-nav li {
+  margin-bottom: 16px;
   width: 100%; }
+  @media (min-width: 769px) {
+    .header-nav li {
+      margin-bottom: 0;
+      width: 33%; } }
+  @media (min-width: 769px) {
+    .header-nav li {
+      justify-content: space-between; } }
   .header-nav li:last-child {
     margin-right: 0; }
-  @media screen and (min-width: 768px) {
-    .header-nav li {
-      width: 33%; } }
   .header-nav li a {
-    border: 2px solid rgba(122, 122, 122, 0.5);
-    padding: 12px;
-    width: 240px; }
-    @media screen and (min-width: 768px) {
+    margin: auto;
+    width: 240px;
+    border: 2px solid #7a7a7a;
+    border-radius: 4px;
+    color: #7a7a7a;
+    padding: 12px; }
+    @media (min-width: 769px) {
       .header-nav li a {
         border: 0;
         border-bottom: 2px solid transparent;
+        border-radius: 0;
         color: #7a7a7a;
         padding: 0;
-        transition: .5s;
+        transition: 0.5s;
         width: 68px; } }
-
-@media screen and (min-width: 768px) {
-  .header-nav {
-    display: flex;
-    justify-content: space-between; } }
 
 .info .flex {
   flex-direction: column; }
   .info .flex .info-text {
     line-height: 1.4;
     margin-bottom: 20px; }
-    @media screen and (min-width: 768px) {
+    @media (min-width: 769px) {
       .info .flex .info-text {
         margin-right: 20px;
         text-align: left;
         width: 60%; } }
-  @media screen and (min-width: 768px) {
+  @media (min-width: 769px) {
     .info .flex {
       align-items: center;
       flex-direction: row-reverse;
@@ -260,15 +284,14 @@ header .name {
     flex-flow: column; }
 
 ul {
-  display: flex;
   flex-wrap: wrap;
   justify-content: space-around; }
-  @media screen and (min-width: 768px) {
+  @media (min-width: 769px) {
     ul li {
       float: left;
       padding: 0 4px;
       width: 50%; } }
-  @media screen and (min-width: 768px) {
+  @media (min-width: 769px) {
     ul li {
       display: inline-block;
       width: 33%; } }
@@ -316,26 +339,28 @@ footer .flex {
 footer .mobile a {
   color: #7a7a7a; }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 769px) {
   footer .mobile {
     display: none; } }
 
 .footer-nav {
   display: none; }
-  .footer-nav a {
-    border: 0;
-    padding: 0;
-    width: 120px; }
-    @media screen and (min-width: 768px) {
-      .footer-nav a {
-        border-bottom: 2px solid transparent;
-        color: #7a7a7a;
-        margin-left: 24px;
-        transition: .5s;
-        width: auto; } }
-  @media screen and (min-width: 768px) {
+  @media (min-width: 769px) {
     .footer-nav {
       display: flex;
       justify-content: space-around; }
       .footer-nav li {
         width: 33%; } }
+  .footer-nav a {
+    border: 0;
+    padding: 0;
+    width: 120px; }
+    @media (min-width: 769px) {
+      .footer-nav a {
+        border-bottom: 2px solid transparent;
+        color: #7a7a7a;
+        margin-left: 24px;
+        transition: 0.5s;
+        width: auto; } }
+
+/*# sourceMappingURL=styles.css.map */
